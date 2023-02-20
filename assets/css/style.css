@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+li {
+    list-style: none;
+}
+/*header*/
+.header {
+    display: flex;
+    height: 200px;
+}
+.header_wrapper {
+    margin: 1% 2% 0 2%;; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_icon {
+    width: 1.3vw;
+    height: 1.3vw;
+}
+.search_form {
+    transition: .5s;
+}
+.search_form:hover {
+    transform: scale(1.2);
+}
+.navigation {
+    display: flex;
+}
+.header_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+.nav_item {
+    margin-right: 120px;
+    position: relative;
+}
+
+.nav_item:last-child {
+    margin-right: 0;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    transition: .3s;
+    height: 2px;
+    width: 100%;
+    top: 100%;
+    background-color: black;
+    transform: scaleX(0);
+}
+.link:hover::before, .link:focus, .link:active {
+    transform: scaleX(1);
+}
+.nav_item:hover .nav_item_open {
+        display: block;    
+}
+
+.header_nav_open {
+    position: absolute;
+    padding-top: 10px;
+}
+.nav_item_open {
+    display: none;
+    margin-bottom: 5px;
+    position: relative;
+    min-width: 200px;
+}
+
+.link_open {
+    font-size: 17px;
+    color: white;
+}
+.link_open::before {
+    content: "";
+    position: absolute;
+    transition: .3s;
+    height: 2px;
+    width: 100%;
+    top: 100%;
+    background-color: white;
+    transform: scaleX(0);
+}
+.link_open:hover::before {
+    transform: scaleX(1);
+}
+
+
+/*section welcome*/
+.welcome_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/intro.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+}
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.intro_text {
+    color: white;
+    font-size: 45px;
+    font-weight: 100px;
+}
+.intro_link {
+    color: white;
+}
+.intro_link:hover {
+    color: black;
+}
+/*section about*/
+.about_wrapper {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.about_text {
+    padding-bottom: 35px;
+}
+.button {
+    border-radius: 20px;
+    background-color: white;
+    font-size: 18px;
+    padding: 14px 27px;
+    font-family: 'Julius Sans One', sans-serif;
+    border: 1px solid;
+    cursor: pointer;
+    
+}
+.button:hover {
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+}
+/* section portfolio*/
+.portfolio {
+    margin-bottom: 60px;
+}
+.portfolio_wrapper {
+    margin: 1% 2% 0 2%;; 
+    display: flex;
+
+}
+.portfolio_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    margin-right: 30px;
+}
+.portfolio_img {
+    width: 30vw;
+    height: 692px;
+}
+
+/*footer*/
+
+.footer_wrapper {
+    margin: 1% 2% 0 2%;; 
+}
+.wrapper_box {
+    display: flex;
+    flex-direction: column;
+}
+.box_for_text {
+    display: flex;
+    justify-content: center;
+}
+.footer_text {
+    text-align: center;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+.footer_text::before,
+.footer_text::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    border: solid black;
+    border-width: 0 800px;
+}
+.footer_text::before {
+    margin-left: -100%;
+}
+.footer_text::after {
+    margin-right: -100%;
+}
+.footer_nav_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.footer_nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_social_link {
+    display: flex;
+    justify-content: space-between;
+}
+.social_icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
